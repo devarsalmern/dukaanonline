@@ -10,7 +10,7 @@ const HeroCard = () => {
       }}
     >
       <div
-        className="bg-gray-800 p-6 sm:p-9 rounded-3xl shadow-lg w-full max-w-6xl flex flex-col lg:flex-row text-lg text-center lg:text-left"
+        className="bg-gray-800 p-6 sm:p-9 rounded-3xl shadow-lg w-full max-w-4xl lg:max-w-7xl xl:max-w-8xl flex flex-col lg:flex-row text-lg text-center lg:text-left"
         style={{ background: "linear-gradient(to right, #3A5AA4, #072564)" }}
       >
         <div className="lg:w-2/3 flex flex-col justify-center">
