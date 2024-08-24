@@ -8,6 +8,7 @@ import FeaturesOfSite from "./components/FeaturesOfSite";
 import WhyUs from "./components/WhyUs";
 import Subscribe from "./components/Subscribe";
 import Blog from "./components/Blog";
+import Footer from "./components/Footer";
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
       <WhyUs />
       <Subscribe />
       <Blog />
+      <Footer />
       {/* Other components/routes go here */}
     </Router>
   );

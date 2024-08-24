@@ -9,26 +9,27 @@ import { Disclosure } from "@headlessui/react";
 
 const Navbar = () => {
   return (
-    <Disclosure as="nav" className=" p-4">
+    <Disclosure as="nav" className="p-4">
       {({ open }) => (
         <div className="container mx-auto flex items-center justify-between">
           {/* Logo and Navigation Links */}
-          <Link
-            to="/"
-            className="text-lg  transition-colors duration-200 hover:text-gray-400"
-          >
-            DukaanOnline
+          <Link to="/" className="flex items-center">
+            <img
+              src="/images/dukaanonlinelogo.png"
+              alt="DukaanOnline Logo"
+              className="h-8 w-auto" // Set height to 48px (h-12) and width to auto
+            />
           </Link>
 
           {/* Cart icon for small screens */}
           <div className="lg:hidden flex items-center space-x-4">
             <Link
               to="/cart"
-              className="text-lg  transition-colors duration-200 hover:text-gray-400"
+              className="text-lg transition-colors duration-200 hover:text-gray-400"
             >
               <FontAwesomeIcon icon={faShoppingCart} />
             </Link>
-            <Disclosure.Button className=" focus:outline-none">
+            <Disclosure.Button className="focus:outline-none">
               <FontAwesomeIcon
                 icon={open ? faTimes : faBars}
                 className="text-lg"
@@ -44,31 +45,31 @@ const Navbar = () => {
           >
             <Link
               to="/products"
-              className="text-lg  transition-colors duration-200 hover:text-gray-400"
+              className="text-lg transition-colors duration-200 hover:text-gray-400"
             >
               Products
             </Link>
             <Link
               to="/about"
-              className="text-lg  transition-colors duration-200 hover:text-gray-400"
+              className="text-lg transition-colors duration-200 hover:text-gray-400"
             >
               About
             </Link>
             <Link
               to="/findUs"
-              className="text-lg  transition-colors duration-200 hover:text-gray-400"
+              className="text-lg transition-colors duration-200 hover:text-gray-400"
             >
               Find Us
             </Link>
             <Link
               to="/pages"
-              className="text-lg  transition-colors duration-200 hover:text-gray-400"
+              className="text-lg transition-colors duration-200 hover:text-gray-400"
             >
               Pages
             </Link>
             <Link
               to="/cart"
-              className="text-lg  transition-colors duration-200 hover:text-gray-400"
+              className="text-lg transition-colors duration-200 hover:text-gray-400"
             >
               <FontAwesomeIcon icon={faShoppingCart} />
             </Link>
