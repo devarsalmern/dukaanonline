@@ -145,7 +145,7 @@ const Navbar = () => {
                   Pages
                 </span>
                 <FontAwesomeIcon
-                  icon={dropdownOpen ? faChevronUp : faChevronDown}
+                  icon={dropdownOpenPages ? faChevronUp : faChevronDown}
                   className="text-lg"
                 />
               </div>
