@@ -93,25 +93,25 @@ const Navbar = () => {
                       onClick={() => navigate("/accessories")}
                       className="flex-1 text-left px-4 py-2 hover:bg-gray-100"
                     >
-                      Accessories
+                      <p>Accessories</p>
                     </button>
                     <button
                       onClick={() => navigate("/speakers")}
                       className="flex-1 text-left px-4 py-2 hover:bg-gray-100"
                     >
-                      Speakers
+                      <p> Speakers</p>
                     </button>
                     <button
                       onClick={() => navigate("/earphones")}
                       className="flex-1 text-left px-4 py-2 hover:bg-gray-100"
                     >
-                      Earphones
+                      <p>Earphones</p>
                     </button>
                     <button
                       onClick={() => navigate("/headphones")}
                       className="flex-1 text-left px-4 py-2 hover:bg-gray-100"
                     >
-                      Headphones
+                      <p>Headphones</p>
                     </button>
                     <Link
                       to="/all-products"

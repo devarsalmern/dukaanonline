@@ -58,10 +58,10 @@ const WhyUs = () => {
                 <h2 className="text-xl font-semibold mb-2">
                   Exceptional Sound Quality
                 </h2>
-                <h4 className="text-gray-700">
+                <p className="text-gray-700">
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                   Praesent varius commodo aliquam.
-                </h4>
+                </p>
               </div>
             </motion.div>
             <motion.div
@@ -79,10 +79,10 @@ const WhyUs = () => {
                 <h2 className="text-xl font-semibold mb-2">
                   Versatile and User-Friendly
                 </h2>
-                <h4 className="text-gray-700">
+                <p className="text-gray-700">
                   Maecenas eu dui dictum, imperdiet metus et, dapibus nisl.
                   Integer sit amet augue magna.
-                </h4>
+                </p>
               </div>
             </motion.div>
           </div>
@@ -119,10 +119,10 @@ const WhyUs = () => {
                 <h2 className="text-xl font-semibold mb-2">
                   Innovative Design
                 </h2>
-                <h4 className="text-gray-700">
+                <p className="text-gray-700">
                   Mauris laoreet congue ipsum at ultricies. Phasellus mattis
                   dictum neque, vel sagittis odio pellentesque at.
-                </h4>
+                </p>
               </div>
             </motion.div>
             <motion.div
@@ -140,10 +140,10 @@ const WhyUs = () => {
                 <h2 className="text-xl font-semibold mb-2">
                   Superior Build and Durability
                 </h2>
-                <h4 className="text-gray-700">
+                <p className="text-gray-700">
                   Aliquam vel augue sed justo sagittis lobortis. Vestibulum
                   porttitor sit amet magna id elementum.
-                </h4>
+                </p>
               </div>
             </motion.div>
           </div>

@@ -14,12 +14,12 @@ const HeroCard = () => {
         style={{ background: "linear-gradient(to right, #3A5AA4, #072564)" }}
       >
         <div className="lg:w-2/3 flex flex-col justify-center">
-          <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4">
             Elevate Your Audio Journey Today
-          </h1>
-          <h2 className="text-lg sm:text-xl md:text-2xl font-semibold mb-6">
-            Experience the Future of Audio
           </h2>
+          <h4 className="text-lg sm:text-xl md:text-2xl font-semibold mb-6">
+            Experience the Future of Audio
+          </h4>
           <div className="flex flex-col sm:flex-row justify-center lg:justify-start space-y-4 sm:space-x-4 sm:space-y-0">
             <Link to="/shopNow">
               <button className="bg-blue-500 hover:bg-blue-400 text-white font-bold py-2 sm:py-3 px-4 sm:px-5 border-b-4 border-blue-700 hover:border-blue-500 rounded">

@@ -19,33 +19,33 @@ const FeaturesOfSite = () => {
             icon={faTruck}
             className="text-grey-500 text-4xl mb-4"
           />
-          <h2 className="text-xl font-semibold mb-2">Free Delivery</h2>
-          <h4 className="text-gray-700">
+          <h3 className="text-xl font-semibold mb-2">Free Delivery</h3>
+          <p className="text-gray-700">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean
             hendrerit purus quis quam.
-          </h4>
+          </p>
         </div>
         <div className="flex flex-col items-center text-center mb-6 lg:mb-0">
           <FontAwesomeIcon
             icon={faStore}
             className="text-grey-500 text-4xl mb-4"
           />
-          <h2 className="text-xl font-semibold mb-2">Self Pickup</h2>
-          <h4 className="text-gray-700">
+          <h3 className="text-xl font-semibold mb-2">Self Pickup</h3>
+          <p className="text-gray-700">
             Etiam vitae ornare nulla. Class aptent taciti sociosqu ad litora
             torquent per conubia nostra.
-          </h4>
+          </p>
         </div>
         <div className="flex flex-col items-center text-center">
           <FontAwesomeIcon
             icon={faShieldAlt}
             className="text-grey-500 text-4xl mb-4"
           />
-          <h2 className="text-xl font-semibold mb-2">Warranty</h2>
-          <h4 className="text-gray-700">
+          <h3 className="text-xl font-semibold mb-2">Warranty</h3>
+          <p className="text-gray-700">
             Donec vehicula et nulla vel fringilla. Proin viverra fermentum erat,
             vitae aliquet erat dapibus vitae.
-          </h4>
+          </p>
         </div>
       </div>
       <div className="text-center mt-8">

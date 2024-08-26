@@ -8,9 +8,9 @@ const Blog = () => {
 
       {/* Header Section */}
       <div className="flex justify-between items-center mb-8">
-        <h4 className="text-2xl lg:text-3xl font-bold text-gray-800">
+        <p className="text-2xl lg:text-3xl font-bold text-gray-800">
           DukaanOnline Blog
-        </h4>
+        </p>
         <button className="bg-blue-500 text-white py-2 px-4 rounded-lg shadow-lg hover:bg-blue-600 transition duration-300">
           See More Articles
         </button>
@@ -32,15 +32,15 @@ const Blog = () => {
             <button className="bg-blue-500 text-white py-1 px-3 rounded-full text-xs font-bold mb-4">
               Guide
             </button>
-            <h4 className="text-sm text-gray-600 mb-2">October 9, 2023</h4>
+            <p className="text-sm text-gray-600 mb-2">October 9, 2023</p>
             <h1 className="text-xl lg:text-2xl font-bold text-gray-800 mb-4">
               Music for Every Occasion: Crafting the Perfect Playlist for
               Different Moods and Activities
             </h1>
-            <h4 className="text-gray-600 mb-4">
+            <p className="text-gray-600 mb-4">
               Learn how to curate the ideal playlist for any situation, from
               workouts to relaxation and everything in between.
-            </h4>
+            </p>
             <a
               href=""
               className="flex items-center text-blue-500 hover:underline"
@@ -65,14 +65,14 @@ const Blog = () => {
             <button className="bg-blue-500 text-white py-1 px-3 rounded-full text-xs font-bold mb-4">
               Guide
             </button>
-            <h4 className="text-sm text-gray-600 mb-2">October 9, 2023</h4>
+            <p className="text-sm text-gray-600 mb-2">October 9, 2023</p>
             <h1 className="text-xl lg:text-2xl font-bold text-gray-800 mb-4">
               Finding the Perfect Fit: A Guide to Choosing the Right Headphones
             </h1>
-            <h4 className="text-gray-600 mb-4">
+            <p className="text-gray-600 mb-4">
               Navigate the headphone market with confidence as we provide expert
               advice on selecting the perfect pair to suit your needs.
-            </h4>
+            </p>
             <a
               href=""
               className="flex items-center text-blue-500 hover:underline"

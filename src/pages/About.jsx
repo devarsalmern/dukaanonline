@@ -51,19 +51,19 @@ const About = () => {
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
             <div className="p-6 bg-white rounded-lg shadow-lg">
               <h1 className="text-4xl font-bold text-blue-500">20+</h1>
-              <h4 className="text-gray-700 mt-2">Years of Experience</h4>
+              <p className="text-gray-700 mt-2">Years of Experience</p>
             </div>
             <div className="p-6 bg-white rounded-lg shadow-lg">
               <h1 className="text-4xl font-bold text-blue-500">100+</h1>
-              <h4 className="text-gray-700 mt-2">Audio Products</h4>
+              <p className="text-gray-700 mt-2">Audio Products</p>
             </div>
             <div className="p-6 bg-white rounded-lg shadow-lg">
               <h1 className="text-4xl font-bold text-blue-500">10+</h1>
-              <h4 className="text-gray-700 mt-2">Industry Awards</h4>
+              <p className="text-gray-700 mt-2">Industry Awards</p>
             </div>
             <div className="p-6 bg-white rounded-lg shadow-lg">
               <h1 className="text-4xl font-bold text-blue-500">100k+</h1>
-              <h4 className="text-gray-700 mt-2">Community Members</h4>
+              <p className="text-gray-700 mt-2">Community Members</p>
             </div>
           </div>
         </div>
