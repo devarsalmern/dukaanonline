@@ -14,7 +14,7 @@ const Footer = () => {
       <div className="container mx-auto flex flex-col lg:flex-row justify-between items-start lg:items-center px-4">
         {/* Newsletter Section */}
         <div className="flex flex-col lg:w-1/2 mb-8 lg:mb-0">
-          <h3 className="text-xl font-bold mb-4">Newsletter</h3>
+          <h3 className="text-xl font-bold mb-4">DukaanOnline</h3>
           <p className="mb-4">
             Subscribe to our newsletter to get the latest updates.
           </p>
