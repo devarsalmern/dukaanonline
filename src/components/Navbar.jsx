@@ -163,7 +163,7 @@ const Navbar = () => {
                     </button>
 
                     <button
-                      onClick={() => navigate("/blog")}
+                      onClick={() => navigate("/blogpage")}
                       className="flex-1 text-left px-4 py-2 hover:bg-gray-100"
                     >
                       Blog

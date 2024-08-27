@@ -7,7 +7,7 @@ import Category from "../components/Category";
 import FeaturesOfSite from "../components/FeaturesOfSite";
 import WhyUs from "../components/WhyUs";
 import Subscribe from "../components/Subscribe";
-import Blog from "./Blog";
+import Blog from "../components/Blog";
 import Footer from "../components/Footer";
 
 function Home() {
