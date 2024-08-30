@@ -1,6 +1,7 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faChevronRight } from "@fortawesome/free-solid-svg-icons";
 import { useState } from "react";
+import Loop from "../components/Loop";
 
 const blogPosts = [
   {
@@ -70,15 +71,6 @@ const blogPosts = [
 ];
 
 const BlogPage = () => {
-  const [subscribed, setSubscribed] = useState(false);
-  const [email, setEmail] = useState("");
-
-  const handleSubscribe = () => {
-    if (email) {
-      setSubscribed(true);
-    }
-  };
-
   return (
     <div className="bg-white py-16">
       {/* Section: Title */}
@@ -88,7 +80,7 @@ const BlogPage = () => {
 
       {/* Section: Our Story */}
       <div className="container mx-auto flex flex-col lg:flex-row items-center lg:space-x-12 relative">
-        <div className="lg:w-1/2 mb-8 lg:mb-0 relative z-10">
+        <div className="lg:w-1/2 mb-8 pl-3 lg:mb-0 relative z-10">
           <img
             src="./images/Blog1.jpg"
             alt="Our Story"
@@ -165,44 +157,7 @@ const BlogPage = () => {
           ))}
         </div>
       </div>
-
-      <div className="bg-[#2A2C39] p-8 rounded-lg shadow-lg text-white mt-12 mx-auto max-w-lg ">
-        {!subscribed ? (
-          <>
-            <h4 className="text-2xl font-bold mb-4 text-center">
-              Stay in the LOOP
-            </h4>
-            <div className="text-center mb-4">
-              <h6 className="text-lg">
-                Subscribe to Our Newsletter for Exclusive Updates and Offers
-              </h6>
-            </div>
-            <div className="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-4">
-              <input
-                type="email"
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
-                placeholder="Enter your email"
-                className="w-full sm:w-auto p-2 rounded-md text-gray-900 flex-grow sm:flex-grow-0"
-                style={{ maxWidth: "300px" }}
-              />
-              <button
-                onClick={handleSubscribe}
-                className="bg-blue-500 text-white py-2 px-4 rounded-lg shadow-lg hover:bg-blue-600 transition duration-300"
-              >
-                Submit
-              </button>
-            </div>
-          </>
-        ) : (
-          <div className="text-center">
-            <h4 className="text-2xl font-bold mb-2">Thank You!</h4>
-            <p className="text-lg">
-              You've successfully subscribed to our newsletter.
-            </p>
-          </div>
-        )}
-      </div>
+      <Loop />
     </div>
   );
 };

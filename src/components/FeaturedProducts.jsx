@@ -71,7 +71,7 @@ const FeaturedProducts = () => {
         </div>
       </div>
       <div className="flex justify-center mt-8">
-        <Link to="/shopNow">
+        <Link to="/Products">
           <button className="bg-[#406BCF] hover:bg-[#6385EE] text-white font-bold py-3 px-5 rounded">
             See All Products
           </button>

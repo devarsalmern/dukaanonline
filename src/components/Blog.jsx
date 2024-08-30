@@ -1,5 +1,6 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faChevronRight } from "@fortawesome/free-solid-svg-icons";
+import { Link } from "react-router-dom";
 
 const Blog = () => {
   return (
@@ -12,7 +13,7 @@ const Blog = () => {
           DukaanOnline Blog
         </p>
         <button className="bg-blue-500 text-white py-2 px-4 rounded-lg shadow-lg hover:bg-blue-600 transition duration-300">
-          See More Articles
+          <Link to="/blogpage">See More Articles</Link>
         </button>
       </div>
 
