@@ -6,7 +6,6 @@ const ProductDetail = () => {
   const [product, setProduct] = useState(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
-  const [cart, setCart] = useState([]); // Local state for cart
 
   useEffect(() => {
     const fetchProduct = async () => {
@@ -26,11 +25,6 @@ const ProductDetail = () => {
 
     fetchProduct();
   }, [id]);
-
-  const handleAddToCart = () => {
-    setCart((prevCart) => [...prevCart, product]); // Add product to cart
-    console.log("Product added to cart:", product);
-  };
 
   if (loading) {
     return (
@@ -83,12 +77,11 @@ const ProductDetail = () => {
             </p>
             <p className="text-lg text-gray-600 mb-6">{product.description}</p>
           </div>
-          <button
-            onClick={handleAddToCart}
-            className="bg-gradient-to-r from-blue-400 to-blue-600 text-white py-3 px-6 rounded-lg shadow-lg hover:opacity-90 transition duration-300"
-          >
-            Add to Cart
-          </button>
+          <Link to="/products">
+            <button className="bg-gradient-to-r from-blue-400 to-blue-600 text-white py-3 px-6 rounded-lg shadow-lg hover:opacity-90 transition duration-300">
+              See All Products
+            </button>
+          </Link>
         </div>
       </div>
     </div>
