@@ -6,6 +6,7 @@ import {
   faArrowRight,
   faChevronRight,
 } from "@fortawesome/free-solid-svg-icons";
+import { Link } from "react-router-dom";
 
 const Category = () => {
   const [categories, setCategories] = useState([]);
@@ -82,8 +83,9 @@ const Category = () => {
           style={{ transform: `translateX(-${currentIndex * 100}%)` }}
         >
           {categories.map((category, index) => (
-            <div
+            <Link
               key={index}
+              to="/products"
               className="flex-shrink-0 w-full sm:w-1/2 md:w-2/5 lg:w-1/3 px-4 lg:pl-10"
             >
               <div className="bg-white p-6 rounded-lg shadow-lg text-left h-[450px] flex flex-col justify-between relative transition-transform duration-300 ease-in-out transform hover:scale-95 hover:shadow-xl">
@@ -94,13 +96,10 @@ const Category = () => {
                   <p className="text-xs sm:text-sm md:text-sm lg:text-base mb-4">
                     {category.description}
                   </p>
-                  <a
-                    href={category.link}
-                    className="flex items-center text-blue-500 hover:underline"
-                  >
+                  <div className="flex items-center text-blue-500 hover:underline">
                     <span className="text-sm font-medium">Learn More</span>
                     <FontAwesomeIcon icon={faChevronRight} className="ml-2" />
-                  </a>
+                  </div>
                 </div>
                 <div className="absolute bottom-4 right-4">
                   <img
@@ -110,7 +109,7 @@ const Category = () => {
                   />
                 </div>
               </div>
-            </div>
+            </Link>
           ))}
         </div>
       </div>
