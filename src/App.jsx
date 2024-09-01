@@ -29,6 +29,7 @@ function App() {
             <Route path="/product/:id" element={<ProductDetail />} />
             <Route path="/checkout" element={<Checkout />} />
             <Route path="/findUs" element={<FindUs />} />
+            <Route path="/aboutus" element={<About />} />
           </Routes>
           <Layout />
         </CartProvider>
