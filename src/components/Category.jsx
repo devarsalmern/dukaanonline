@@ -1,4 +1,5 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
+import axios from "axios";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faArrowLeft,
@@ -7,38 +8,40 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 
 const Category = () => {
+  const [categories, setCategories] = useState([]);
   const [currentIndex, setCurrentIndex] = useState(0);
 
-  const categories = [
-    {
-      title: "Earbuds",
-      description:
-        "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum fuga a alias commodi, dolores quo, cum ut dicta minus maiores odit quis soluta. Itaque iste atque earum veniam quis omnis.",
-      imgSrc: "/images/category1.png",
-      link: "/earbuds",
-    },
-    {
-      title: "Headphones",
-      description:
-        "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum fuga a alias commodi, dolores quo, cum ut dicta minus maiores odit quis soluta. Itaque iste atque earum veniam quis omnis.",
-      imgSrc: "/images/category2.png",
-      link: "/headphones",
-    },
-    {
-      title: "Speakers",
-      description:
-        "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum fuga a alias commodi, dolores quo, cum ut dicta minus maiores odit quis soluta. Itaque iste atque earum veniam quis omnis.",
-      imgSrc: "/images/category3.png",
-      link: "/speakers",
-    },
-    {
-      title: "Accessories",
-      description:
-        "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum fuga a alias commodi, dolores quo, cum ut dicta minus maiores odit quis soluta. Itaque iste atque earum veniam quis omnis.",
-      imgSrc: "/images/category4.png",
-      link: "/accessories",
-    },
-  ];
+  useEffect(() => {
+    const fetchCategoriesWithImages = async () => {
+      try {
+        const categoriesResponse = await axios.get(
+          "https://fakestoreapi.com/products/categories"
+        );
+
+        const categoriesWithImages = await Promise.all(
+          categoriesResponse.data.map(async (category) => {
+            const productsResponse = await axios.get(
+              `https://fakestoreapi.com/products/category/${category}`
+            );
+            const imageUrl = productsResponse.data[0]?.image;
+
+            return {
+              title: category.charAt(0).toUpperCase() + category.slice(1),
+              description: `Explore our wide range of ${category}. High-quality and affordable options for everyone.`,
+              imgSrc: imageUrl,
+              link: `/category/${category}`,
+            };
+          })
+        );
+
+        setCategories(categoriesWithImages);
+      } catch (error) {
+        console.error("Error fetching categories with images:", error);
+      }
+    };
+
+    fetchCategoriesWithImages();
+  }, []);
 
   const handlePrev = () => {
     setCurrentIndex((prevIndex) =>
@@ -83,7 +86,7 @@ const Category = () => {
               key={index}
               className="flex-shrink-0 w-full sm:w-1/2 md:w-2/5 lg:w-1/3 px-4 lg:pl-10"
             >
-              <div className="bg-[#EEEFFA] p-6 rounded-lg shadow-lg text-left h-[400px] flex flex-col justify-between relative transition-transform duration-300 ease-in-out transform hover:scale-95 hover:shadow-xl">
+              <div className="bg-white p-6 rounded-lg shadow-lg text-left h-[450px] flex flex-col justify-between relative transition-transform duration-300 ease-in-out transform hover:scale-95 hover:shadow-xl">
                 <div className="flex flex-col items-start">
                   <h2 className="text-sm sm:text-base md:text-lg lg:text-xl font-semibold mb-2">
                     {category.title}
@@ -99,12 +102,11 @@ const Category = () => {
                     <FontAwesomeIcon icon={faChevronRight} className="ml-2" />
                   </a>
                 </div>
-                <div className="absolute bottom-0 right-0">
+                <div className="absolute bottom-4 right-4">
                   <img
                     src={category.imgSrc}
                     alt={category.title}
-                    className="w-24 h-24 sm:w-36 sm:h-36 md:w-44 md:h-44 lg:w-52 lg:h-52 object-cover"
-                    style={{ margin: 0 }}
+                    className="w-36 h-36 sm:w-44 sm:h-44 md:w-52 md:h-52 lg:w-60 lg:h-60 object-cover"
                   />
                 </div>
               </div>

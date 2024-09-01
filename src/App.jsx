@@ -10,7 +10,7 @@ import ProductDetail from "./pages/ProductDetail";
 import { CartProvider } from "./context/CartContext";
 import Checkout from "./pages/CheckOut";
 import Cart from "./components/Cart";
-
+import FindUs from "./pages/FindUs";
 function App() {
   return (
     <Router>
@@ -25,6 +25,8 @@ function App() {
           <Route path="/cart" element={<Cart />} />
           <Route path="/product/:id" element={<ProductDetail />} />
           <Route path="/checkout" element={<Checkout />} />
+          <Route path="/findUs" element={<FindUs />} />
+
           {/* Add the new route */}
           {/* Add other routes here */}
         </Routes>
