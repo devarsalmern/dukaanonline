@@ -1,11 +1,13 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useContext } from "react";
 import { useParams, Link } from "react-router-dom";
+import { useCart } from "../context/CartContext";
 
 const ProductDetail = () => {
   const { id } = useParams();
   const [product, setProduct] = useState(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
+  const { addToCart } = useCart();
 
   useEffect(() => {
     const fetchProduct = async () => {
@@ -54,7 +56,7 @@ const ProductDetail = () => {
     <div className="bg-white text-black dark:bg-gray-800 dark:text-white">
       <div className="p-8 max-w-6xl mx-auto">
         <header className="mb-8">
-          <Link to="/Products" className="text-blue-500 hover:underline">
+          <Link to="/products" className="text-blue-500 hover:underline">
             ← Back to Products
           </Link>
           <h1 className="text-4xl font-bold mt-4">Product Details</h1>
@@ -80,11 +82,14 @@ const ProductDetail = () => {
                 {product.description}
               </p>
             </div>
-            <Link to="/products">
-              <button className="bg-gradient-to-r from-blue-400 to-blue-600 text-white py-3 px-6 rounded-lg shadow-lg hover:opacity-90 transition duration-300">
-                See All Products
+            <div className="flex space-x-4">
+              <button
+                onClick={() => addToCart(product)}
+                className="text-white bg-green-500 hover:bg-green-600 transition duration-300 ease-in-out transform hover:scale-105 py-2 px-4 rounded-lg shadow-lg"
+              >
+                Add to Cart
               </button>
-            </Link>
+            </div>
           </div>
         </div>
       </div>

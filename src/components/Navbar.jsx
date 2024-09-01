@@ -142,7 +142,7 @@ const Navbar = () => {
                         onClick={() => navigate("/products")}
                         className="block px-4 py-2 text-lg hover:bg-gray-200"
                       >
-                        Men
+                        Men's Clothing
                       </button>
                     </li>
                     <li>
@@ -150,7 +150,23 @@ const Navbar = () => {
                         onClick={() => navigate("/products")}
                         className="block px-4 py-2 text-lg hover:bg-gray-200"
                       >
-                        Women
+                        Women's clothing
+                      </button>
+                    </li>
+                    <li>
+                      <button
+                        onClick={() => navigate("/products")}
+                        className="block px-4 py-2 text-lg hover:bg-gray-200"
+                      >
+                        Jewelry
+                      </button>
+                    </li>
+                    <li>
+                      <button
+                        onClick={() => navigate("/products")}
+                        className="block px-4 py-2 text-lg hover:bg-gray-200"
+                      >
+                        Electronics
                       </button>
                     </li>
                   </ul>
@@ -173,7 +189,7 @@ const Navbar = () => {
                         onClick={() => navigate("/about")}
                         className="block px-4 py-2 text-lg hover:bg-gray-200"
                       >
-                        About
+                        AboutUs
                       </button>
                     </li>
                     <li>
@@ -181,7 +197,15 @@ const Navbar = () => {
                         onClick={() => navigate("/contact")}
                         className="block px-4 py-2 text-lg hover:bg-gray-200"
                       >
-                        Contact
+                        ContactUs
+                      </button>
+                    </li>
+                    <li>
+                      <button
+                        onClick={() => navigate("/findUs")}
+                        className="block px-4 py-2 text-lg hover:bg-gray-200"
+                      >
+                        FindUs
                       </button>
                     </li>
                   </ul>
@@ -201,7 +225,6 @@ const Navbar = () => {
                 </button>
                 {cartDropdownOpen && (
                   <div className="absolute right-0 mt-2 w-48 bg-white shadow-lg rounded-lg">
-                    {/* Cart dropdown content */}
                     <div className="p-4">
                       {cartItems.length > 0 ? (
                         <div>
