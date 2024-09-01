@@ -72,92 +72,99 @@ const blogPosts = [
 
 const BlogPage = () => {
   return (
-    <div className="bg-white py-16">
-      {/* Section: Title */}
-      <div className="text-center mb-12">
-        <h1 className="text-4xl font-bold text-gray-800">DukaanOnline Blog</h1>
-      </div>
-
-      {/* Section: Our Story */}
-      <div className="container mx-auto flex flex-col lg:flex-row items-center lg:space-x-12 relative">
-        <div className="lg:w-1/2 mb-8 pl-3 lg:mb-0 relative z-10">
-          <img
-            src="./images/Blog1.jpg"
-            alt="Our Story"
-            className="w-full h-full rounded-lg shadow-lg mx-auto lg:mx-0"
-          />
+    <div className="bg-white text-black dark:bg-gray-800 dark:text-white">
+      <div className="bg-white py-16">
+        {/* Section: Title */}
+        <div className="text-center mb-12">
+          <h1 className="text-4xl font-bold text-gray-800">
+            DukaanOnline Blog
+          </h1>
         </div>
-        <div className="lg:w-1/2 text-center lg:text-left bg-white p-8 rounded-lg shadow-lg absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 lg:-translate-x-1/3 z-20">
-          <div className="p-6">
-            <button className="bg-blue-500 text-white py-1 px-3 rounded-full text-xs font-bold mb-4">
-              Guide
-            </button>
-            <p className="text-sm text-gray-600 mb-2">October 9, 2023</p>
-            <h1 className="text-xl lg:text-2xl font-bold text-gray-800 mb-4">
-              Finding the Perfect Fit: A Guide to Choosing the Right Headphones
-            </h1>
-            <p className="text-gray-600 mb-4">
-              Navigate the headphone market with confidence as we provide expert
-              advice on selecting the perfect pair to suit your needs.
-            </p>
-            <a
-              href=""
-              className="flex items-center text-blue-500 hover:underline"
-            >
-              <span className="text-sm font-medium">Read More</span>
-              <FontAwesomeIcon icon={faChevronRight} className="ml-2" />
-            </a>
+
+        {/* Section: Our Story */}
+        <div className="container mx-auto flex flex-col lg:flex-row items-center lg:space-x-12 relative">
+          <div className="lg:w-1/2 mb-8 pl-3 lg:mb-0 relative z-10">
+            <img
+              src="./images/Blog1.jpg"
+              alt="Our Story"
+              className="w-full h-full rounded-lg shadow-lg mx-auto lg:mx-0"
+            />
+          </div>
+          <div className="lg:w-1/2 text-center lg:text-left bg-white p-8 rounded-lg shadow-lg absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 lg:-translate-x-1/3 z-20">
+            <div className="p-6">
+              <button className="bg-blue-500 text-white py-1 px-3 rounded-full text-xs font-bold mb-4">
+                Guide
+              </button>
+              <p className="text-sm text-gray-600 mb-2">October 9, 2023</p>
+              <h1 className="text-xl lg:text-2xl font-bold text-gray-800 mb-4">
+                Finding the Perfect Fit: A Guide to Choosing the Right
+                Headphones
+              </h1>
+              <p className="text-gray-600 mb-4">
+                Navigate the headphone market with confidence as we provide
+                expert advice on selecting the perfect pair to suit your needs.
+              </p>
+              <a
+                href=""
+                className="flex items-center text-blue-500 hover:underline"
+              >
+                <span className="text-sm font-medium">Read More</span>
+                <FontAwesomeIcon icon={faChevronRight} className="ml-2" />
+              </a>
+            </div>
           </div>
         </div>
-      </div>
 
-      <div className="max-w-screen-xl mx-auto p-6 pt-12 lg:pt-16 lg:p-12">
-        {/* Header Section */}
-        <div className="flex justify-between items-center mb-8">
-          <p className="text-2xl lg:text-3xl font-bold text-gray-800">
-            DukaanOnline Blog
-          </p>
-          <button className="bg-blue-500 text-white py-2 px-4 rounded-lg shadow-lg hover:bg-blue-600 transition duration-300">
-            See More Articles
-          </button>
-        </div>
+        <div className="max-w-screen-xl mx-auto p-6 pt-12 lg:pt-16 lg:p-12">
+          {/* Header Section */}
+          <div className="flex justify-between items-center mb-8">
+            <p className="text-2xl lg:text-3xl font-bold text-gray-800">
+              DukaanOnline Blog
+            </p>
+            <button className="bg-blue-500 text-white py-2 px-4 rounded-lg shadow-lg hover:bg-blue-600 transition duration-300">
+              See More Articles
+            </button>
+          </div>
 
-        {/* Blog Posts Section */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-          {blogPosts.map((post) => (
-            <div
-              key={post.id}
-              className="bg-white rounded-lg shadow-lg overflow-hidden transform hover:scale-95 transition duration-300"
-            >
-              <div className="overflow-hidden">
-                <img
-                  src={post.image}
-                  alt="Blog Post"
-                  className="w-full h-auto transform hover:scale-105 transition duration-300"
-                />
+          {/* Blog Posts Section */}
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+            {blogPosts.map((post) => (
+              <div
+                key={post.id}
+                className="bg-white rounded-lg shadow-lg overflow-hidden transform hover:scale-95 transition duration-300"
+              >
+                <div className="overflow-hidden">
+                  <img
+                    src={post.image}
+                    alt="Blog Post"
+                    className="w-full h-auto transform hover:scale-105 transition duration-300"
+                  />
+                </div>
+                <div className="p-6">
+                  <button className="bg-blue-500 text-white py-1 px-3 rounded-full text-xs font-bold mb-4">
+                    Guide
+                  </button>
+                  <p className="text-sm text-gray-600 mb-2">{post.date}</p>
+                  <h1 className="text-xl lg:text-2xl font-bold text-gray-800 mb-4">
+                    {post.title}
+                  </h1>
+                  <p className="text-gray-600 mb-4">{post.description}</p>
+                  <a
+                    href={post.link}
+                    className="flex items-center text-blue-500 hover:underline"
+                  >
+                    <span className="text-sm font-medium">
+                      {post.buttonText}
+                    </span>
+                    <FontAwesomeIcon icon={faChevronRight} className="ml-2" />
+                  </a>
+                </div>
               </div>
-              <div className="p-6">
-                <button className="bg-blue-500 text-white py-1 px-3 rounded-full text-xs font-bold mb-4">
-                  Guide
-                </button>
-                <p className="text-sm text-gray-600 mb-2">{post.date}</p>
-                <h1 className="text-xl lg:text-2xl font-bold text-gray-800 mb-4">
-                  {post.title}
-                </h1>
-                <p className="text-gray-600 mb-4">{post.description}</p>
-                <a
-                  href={post.link}
-                  className="flex items-center text-blue-500 hover:underline"
-                >
-                  <span className="text-sm font-medium">{post.buttonText}</span>
-                  <FontAwesomeIcon icon={faChevronRight} className="ml-2" />
-                </a>
-              </div>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
+        <Loop />
       </div>
-      <Loop />
     </div>
   );
 };

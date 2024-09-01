@@ -1,3 +1,31 @@
 @tailwind base;
 @tailwind components;
-@tailwind utilities;
+@tailwind utilities; /* Default light mode styles */
+body {
+  background-color: #f9f9f9;
+  color: #333;
+}
+
+/* Dark mode styles */
+.dark body {
+  background-color: #1a202c;
+  color: #e2e8f0;
+}
+
+.bg-white {
+  background-color: #ffffff;
+}
+
+.dark .bg-white {
+  background-color: #2d3748; /* Dark mode background color */
+}
+
+.text-gray-800 {
+  color: #2d3748;
+}
+
+.dark .text-gray-800 {
+  color: #e2e8f0; /* Dark mode text color */
+}
+
+/* Add more dark mode styles as needed */

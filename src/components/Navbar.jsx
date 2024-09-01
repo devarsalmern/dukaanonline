@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
@@ -10,6 +10,8 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import { Disclosure } from "@headlessui/react";
 import { useCart } from "../context/CartContext";
+import { faMoon, faSun } from "@fortawesome/free-solid-svg-icons";
+import { ThemeContext } from "../context/ThemeContext";
 
 const Navbar = () => {
   const navigate = useNavigate();
@@ -17,6 +19,7 @@ const Navbar = () => {
   const [dropdownOpen, setDropdownOpen] = useState(false);
   const [dropdownOpenPages, setDropdownOpenPages] = useState(false);
   const [cartDropdownOpen, setCartDropdownOpen] = useState(false); // Cart dropdown state
+  const { darkMode, toggleDarkMode } = useContext(ThemeContext);
 
   // Handle dropdown selection
   const handleSelectChange = (event) => {
@@ -313,6 +316,12 @@ const Navbar = () => {
               </Link>
             </div>
           </div>
+          <button
+            onClick={toggleDarkMode}
+            className="p-2 rounded-full bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-700"
+          >
+            <FontAwesomeIcon icon={darkMode ? faSun : faMoon} size="lg" />
+          </button>
         </div>
       )}
     </Disclosure>

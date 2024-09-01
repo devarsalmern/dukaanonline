@@ -102,7 +102,7 @@ const ContactUs = () => {
     },
   ];
   return (
-    <>
+    <div className="bg-white text-black dark:bg-gray-800 dark:text-white">
       <div className="container mx-auto py-16 px-8">
         <h2 className="text-4xl font-semibold text-gray-800 text-center mb-12">
           Contact Us
@@ -317,7 +317,7 @@ const ContactUs = () => {
           </div>
         </div>
       </div>
-    </>
+    </div>
   );
 };
 

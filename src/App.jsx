@@ -11,27 +11,28 @@ import { CartProvider } from "./context/CartContext";
 import Checkout from "./pages/CheckOut";
 import Cart from "./components/Cart";
 import FindUs from "./pages/FindUs";
+import { ThemeProvider } from "./context/ThemeContext";
+
 function App() {
   return (
     <Router>
-      <CartProvider>
-        <Navbar />
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/contact" element={<ContactUs />} />
-          <Route path="/blogpage" element={<BlogPage />} />
-          <Route path="/products" element={<Products />} />
-          <Route path="/cart" element={<Cart />} />
-          <Route path="/product/:id" element={<ProductDetail />} />
-          <Route path="/checkout" element={<Checkout />} />
-          <Route path="/findUs" element={<FindUs />} />
-
-          {/* Add the new route */}
-          {/* Add other routes here */}
-        </Routes>
-        <Layout />
-      </CartProvider>
+      <ThemeProvider>
+        <CartProvider>
+          <Navbar />
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/contact" element={<ContactUs />} />
+            <Route path="/blogpage" element={<BlogPage />} />
+            <Route path="/products" element={<Products />} />
+            <Route path="/cart" element={<Cart />} />
+            <Route path="/product/:id" element={<ProductDetail />} />
+            <Route path="/checkout" element={<Checkout />} />
+            <Route path="/findUs" element={<FindUs />} />
+          </Routes>
+          <Layout />
+        </CartProvider>
+      </ThemeProvider>
     </Router>
   );
 }
